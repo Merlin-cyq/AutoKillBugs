@@ -6,6 +6,16 @@ A Stardew Valley 1.6 SMAPI mod: **Grubs** and **Flies** in the mines die the ins
 
 ---
 
+## Disclosure: this mod was written entirely by AI
+
+Every part of this mod — the **source code** (kill logic, settings menu, sound suppression, project configuration), the **documentation** (this README and its Chinese counterpart, the changelog), and the **verification work** — was produced by the AI language model **DeepSeek V4.1 Flash**.
+
+The human author (repository owner) contributed only the requirements, the choice of technical approach, acceptance of the results, and the final publish step. All implementation details, code style, wording, and design trade-offs came from the model.
+
+In other words: if anything about this mod strikes you as odd, the source is the model, not the human.
+
+---
+
 ## What this mod does
 
 In the Mines, Skull Cavern, the Quarry Mine, and the Mutant Bug Lair, Grubs and Flies (including the buffed variants found in the Dangerous Mines and the Mutant Bug Lair) die as soon as they are added to the location.
