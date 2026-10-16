@@ -2,7 +2,9 @@
 
 **简体中文** | [English](README.en.md)
 
-星露谷物语 1.6 的 SMAPI 模组：矿井里的**蛆（Grub）**和**苍蝇（Fly）**一出现就自动死亡，但**掉落物、经验值和探险家公会的击杀进度全部照常保留**——因为它走的是游戏自己的击杀流程，而不是「把怪物删掉」。
+星露谷物语（Stardew Valley）1.6 的 SMAPI 模组，用于**自动击杀（auto kill）**矿井里的**蛆（Grub）**与**苍蝇（Fly）**：它们一出现就自动死亡，而**掉落物、经验值和探险家公会的击杀进度全部照常保留**——因为走的是游戏自己的击杀流程，而不是「把怪物删掉」。
+
+> **AutoKillBugs** — a Stardew Valley 1.6 SMAPI mod that **auto-kills Grubs and Flies** in the mines while preserving all loot, XP and Adventurer's Guild kill progress.
 
 ---
 

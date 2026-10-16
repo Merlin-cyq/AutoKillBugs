@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | **English**
 
-A Stardew Valley 1.6 SMAPI mod: **Grubs** and **Flies** in the mines die the instant they appear — while **loot, XP, and Adventurer's Guild kill progress are fully preserved**, because it goes through the game's own kill pipeline instead of simply deleting the monsters.
+**AutoKillBugs** is a Stardew Valley 1.6 SMAPI mod that **auto-kills Grubs and Flies** in the mines the instant they appear — while **loot, XP, and Adventurer's Guild kill progress are fully preserved**, because it goes through the game's own kill pipeline instead of simply deleting the monsters.
 
 ---
 
