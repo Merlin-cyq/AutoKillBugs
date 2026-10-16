@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    AutoKillBugs —— 星露谷物语 1.6 的 SMAPI 模组
+
+    让矿井/骷髅洞穴/突变虫穴里的蛆(Grub)、苍蝇(Fly)及其危险矿井强化变体在出现后立刻死亡，
+    但走的是游戏自己的怪物击杀流程（等价于玩家攻击击杀），
+    因此物品掉落、经验值、探险家公会「杀死洞穴昆虫」击杀计数全部保留。
+
+    注意：目标框架必须保持 net6.0 —— 游戏的 Stardew Valley.runtimeconfig.json 是
+    "tfm": "net6.0"，且游戏目录自带 .NET 6 自包含运行时；
+    编译成 net8.0/net10.0 的产物会因解析不到对应的 System.Runtime 而加载失败。
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <AssemblyName>AutoKillBugs</AssemblyName>
+    <RootNamespace>AutoKillBugs</RootNamespace>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Product>AutoKillBugs</Product>
+    <Description>蛆(Grub)/苍蝇(Fly)出现即经游戏原生击杀流程自动死亡，保留掉落物与击杀进度。</Description>
+
+    <!--
+      游戏安装目录。Pathoschild.Stardew.ModBuildConfig 会先尝试自动探测；
+      探测不到时把下面这行取消注释并填上你自己的路径，
+      或者在命令行覆盖：
+        dotnet build AutoKillBugs/AutoKillBugs.csproj -c Release -p:GamePath="D:\Steam\steamapps\common\Stardew Valley"
+    -->
+    <!-- <GamePath>C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley</GamePath> -->
+
+    <!-- 不要自动把编译产物复制进游戏的 Mods 目录 -->
+    <EnableModDeploy>false</EnableModDeploy>
+    <EnableModZip>false</EnableModZip>
+    <ModFolderName>AutoKillBugs</ModFolderName>
+
+    <!-- 自动引用 smapi-internal\0Harmony.dll（只用于「自动击杀瞬间屏蔽怪物音效」这一个前缀补丁） -->
+    <EnableHarmony>true</EnableHarmony>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 官方构建包：按 GamePath 引用游戏与 SMAPI 程序集，并保证游戏 DLL 不被复制到输出目录 -->
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.*" />
+  </ItemGroup>
+
+  <!--
+    把编译产物 AutoKillBugs.dll 复制回工程目录，
+    使 AutoKillBugs\ 这个文件夹本身就是「可以直接放进 Mods 的模组文件夹」。
+  -->
+  <Target Name="StageModFolder" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(MSBuildProjectDirectory)" />
+    <Message Importance="high" Text="产物已就位：$(MSBuildProjectDirectory)\AutoKillBugs.dll（与 manifest.json 同级，可连同本文件夹一起放进 Mods\）" />
+  </Target>
+
+</Project>

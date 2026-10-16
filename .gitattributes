@@ -1,0 +1,11 @@
+# 统一换行符，避免不同平台 clone 后满屏 diff
+* text=auto eol=lf
+*.cs     text eol=lf
+*.csproj text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+
+# 二进制
+*.dll binary
+*.zip binary
+*.pdb binary

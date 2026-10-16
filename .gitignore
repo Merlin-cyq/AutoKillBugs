@@ -1,0 +1,14 @@
+# 构建输出
+bin/
+obj/
+*.user
+
+# 本地工具链 / 验证 / 备份目录（不随仓库发布）
+_buildtools/
+_verify/
+_backup/
+_release/pkg/
+
+# 系统文件
+Thumbs.db
+desktop.ini
