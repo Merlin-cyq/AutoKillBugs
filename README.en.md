@@ -8,7 +8,7 @@ A Stardew Valley 1.6 SMAPI mod: **Grubs** and **Flies** in the mines die the ins
 
 ## Disclosure: this mod was written entirely by AI
 
-Every part of this mod — the **source code** (kill logic, settings menu, sound suppression, project configuration), the **documentation** (this README and its Chinese counterpart, the changelog), and the **verification work** — was produced by the AI language model **DeepSeek V4.1 Flash**.
+Every part of this mod — the **source code** (kill logic, settings menu, sound suppression, project configuration), the **documentation** (this README and its Chinese counterpart), and the **verification work** — was produced by the AI language model **DeepSeek V4.1 Flash**.
 
 The human author (repository owner) contributed only the requirements, the choice of technical approach, acceptance of the results, and the final publish step. All implementation details, code style, wording, and design trade-offs came from the model.
 
@@ -44,7 +44,7 @@ The first four approaches would also make the bugs disappear, but all of them by
 ## Installation
 
 1. Install [SMAPI](https://smapi.io/) (**4.5.2 or later**)
-2. Download `AutoKillBugs-1.2.0.zip` from this repository's Releases page
+2. Download `AutoKillBugs-1.0.0.zip` from this repository's Releases page
 3. Unzip it and put the whole `AutoKillBugs` folder into your game's `Mods` directory
 4. **Launch the game through `StardewModdingAPI.exe`** (do not launch the game executable directly)
 
@@ -187,16 +187,8 @@ The mod modifies no game data files and adds no sprites or fonts — the panel, 
 
 ---
 
-## Changelog
+## Version
 
-**1.2.0**
-- Added an in-game settings menu (default hotkey `F9`); each switch takes effect immediately and is written back to the config file
-- Added Generic Mod Config Menu integration (optional dependency)
-- Kill logic is identical to 1.1.0, confirmed by a line-by-line IL comparison
+**1.0.0** — first public release.
 
-**1.1.0**
-- Added the `DelayOneFrame` option (enabled by default), letting bugs run one update before dying so the extra loot added after reaching the bottom of the Mines is preserved
-- Added staleness guards to the pending-kill list: no cross-location kills, no double resolution, no unbounded growth
-
-**1.0.0**
-- First release: Grubs and Flies die through the game's own kill pipeline the moment they appear, preserving loot, XP, and guild progress
+Grubs and Flies die through the game's own kill pipeline the moment they appear, with loot, XP, and Adventurer's Guild progress fully preserved; includes an in-game settings menu (hotkey `F9`) and optional Generic Mod Config Menu integration.

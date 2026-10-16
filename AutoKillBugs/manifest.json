@@ -1,7 +1,7 @@
 {
   "Name": "AutoKillBugs",
   "Author": "sdv-autokill-bugs / mod-dev",
-  "Version": "1.2.0",
+  "Version": "1.0.0",
   "Description": "矿井、骷髅洞穴与突变虫穴里的蛆(Grub)与苍蝇(Fly)（含危险矿井的强化变体）在出现后立刻死亡。死亡走游戏原生击杀流程（等价于玩家击杀），因此虫肉、古代种子等掉落物、经验值以及探险家公会「杀死洞穴昆虫」进度全部正常计入。可选「延迟一帧击杀」（DelayOneFrame，默认开启）以完整保留随怪物生成追加的加成掉落。",
   "UniqueID": "ModDev.AutoKillBugs",
   "EntryDll": "AutoKillBugs.dll",

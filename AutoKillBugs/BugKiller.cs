@@ -134,7 +134,7 @@ namespace AutoKillBugs
                 return 0;
             }
 
-            // 模式二：当帧击杀（DelayOneFrame=false，与 1.0.0 完全一致）。本模式下待处理名单恒为空，顺手清一次以防任何残留。
+            // 模式二：当帧击杀（DelayOneFrame=false）。本模式下待处理名单恒为空，顺手清一次以防任何残留。
             if (!this.Config.DelayOneFrame)
             {
                 this.DiscardPendingTargets();
